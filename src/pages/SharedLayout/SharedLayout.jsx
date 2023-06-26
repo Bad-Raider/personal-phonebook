@@ -5,15 +5,9 @@ const SharedLayout  = () => {
     return (
         <>
             <header className={css.header}>
-                <NavLink to="login">
-                    <button type='button'>login</button>
-                </NavLink>
-                <NavLink to="register">
-                    <button type='button'>register</button>
-                </NavLink>
-                <NavLink to="contacts">
-                    <button type='button'>contacts </button>
-                </NavLink>
+                <NavLink to="login" className={css.btnNav} >login</NavLink>
+                <NavLink to="register" className={css.btnNav}>Register</NavLink>
+                <NavLink to="contacts" className={css.btnNav}>contacts</NavLink>
             </header>
             <main>{<Outlet/>}</main>
         </>

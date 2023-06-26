@@ -4,3 +4,21 @@ header {
     height: 50px;
     border-bottom: 2px solid black;
 }
+
+.btnNav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin-right: 40px;
+
+    width: 100px;
+    height: 30px;
+    
+    border-radius: 10px;
+    border: none ;
+    text-decoration: none;
+    background-color: red;
+    color: white;   
+}
+
