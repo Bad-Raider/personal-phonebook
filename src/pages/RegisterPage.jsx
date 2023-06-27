@@ -1,9 +1,12 @@
-
+import RegisterForm from "components/RegisterForm/RegisterForm";
 
 
 const RegisterPage = () => {
     return (
-        <h1>RegisterPage</h1>
+        <>
+            <RegisterForm></RegisterForm>
+        </>
+
     )
 }
 

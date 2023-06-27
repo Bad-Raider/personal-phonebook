@@ -1,0 +1,52 @@
+ a.active{
+    background-color: rgb(5, 130, 240);
+} 
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    height: 50px;
+    padding: 0px 15px 0px;
+    border-bottom: 2px solid black;
+}
+
+.btnNav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+
+    width: 100px;
+    height: 30px;
+    
+    border-radius: 10px;
+    border: none ;
+    text-decoration: none;
+    background-color: red;
+    color: white;   
+}
+
+.btnNav:not(:last-child){
+    margin-right: 40px;
+}
+
+.btnNav:active{
+    background-color: rgb(242, 93, 93);
+    color: rgb(255, 255, 255);   
+}
+
+.navigations{
+      display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px
+}

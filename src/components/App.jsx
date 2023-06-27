@@ -1,9 +1,9 @@
 import { Routes, Route } from "react-router-dom";
-import SharedLayout from "../pages/SharedLayout/SharedLayout";
+import SharedLayout from "../pages/SharedLayout";
 import Contacts from "pages/Contacts ";
 import LoginPage from "../pages/LoginPage";
 import RegisterPage from "../pages/RegisterPage";
-import NotFound from "pages/NotFound/NotFound";
+import NotFound from "pages/NotFound";
 
 const App = () => {
   
