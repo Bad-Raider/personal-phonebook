@@ -3,3 +3,10 @@ export const initialContactsState = {
     isLoading: false,
     error: null,
 };
+
+export const initialState = {
+    user: { name: null, email: null },
+    token: null,
+    isLoggedIn: false,
+    isRefreshing: false,
+};
