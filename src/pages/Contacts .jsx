@@ -4,7 +4,7 @@ import ContactList from "../components/Contacts/ContactList/ContactList";
 import ContactFilter from "../components/ContactFilter/ContactFilter";
 import { useEffect,  } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchContacts } from "redux/operations";
+import { fetchContacts } from "redux/contacts/operationsContacts";
 
 
 

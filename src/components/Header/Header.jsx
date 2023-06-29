@@ -10,11 +10,16 @@ const Header  = () => {
         <div className={css.container}>
             <header
             >
-                <nav className={css.navigations}><NavLink to="login" className={css.btnNav} >login</NavLink>
-                    <NavLink to="register"
-                        className={css.btnNav}
-                        activeClassName={css.active}>Register</NavLink>
-                    <NavLink to="contacts" className={css.btnNav}>contacts</NavLink></nav>
+                <nav className={css.navigations}>
+                    
+                    <NavLink to="/" className={css.btnNav} >Home</NavLink>
+                    
+                    {!auth.token && <NavLink to="login" className={css.btnNav} >login</NavLink>}
+                    
+                    {!auth.token && <NavLink to="register" className={css.btnNav}>Register</NavLink>}
+                    
+                    {auth.isLoggedIn && <NavLink to="contacts" className={css.btnNav}>contacts</NavLink>}
+                </nav>
                 
                 {auth.isLoggedIn && <UserMenu />}
 

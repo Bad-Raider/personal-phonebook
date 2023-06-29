@@ -1,6 +1,8 @@
 import { useDispatch } from 'react-redux';
-import { register } from 'redux/operations2';
+import { register } from 'redux/auth/operationsAuth';
 import css from './RegisterForm.module.css';
+// import { Navigate } from "react-router-dom";
+
 
 const RegisterForm = () => {
       const dispatch = useDispatch();
@@ -17,6 +19,10 @@ const RegisterForm = () => {
         );
         form.reset();
     };
+
+//     if (isLoginSuccess) {
+//     return <Navigate to="/login" replace />;
+//   }
 
     return (<>
         <h1 className={css.title}>RegisterPage</h1>

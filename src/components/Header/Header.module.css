@@ -1,7 +1,7 @@
- .active{
+ /* .active{
     background-color: rgb(5, 130, 240);
     color: yellowgreen;
-} 
+}  */
 
 header {
     display: flex;

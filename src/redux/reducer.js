@@ -1,7 +1,7 @@
 import { combineReducers } from "@reduxjs/toolkit";
-import { contactsReducer } from "./contactsSlice";
-import { filterReducer } from "./filterSlice";
-import { authReducer } from "./contactsSlice2";
+import { contactsReducer } from "./contacts/contactsSlice";
+import { filterReducer } from "./filter/filterSlice";
+import { authReducer } from "./auth/authSlice";
 
 export const reducer = combineReducers({
   auth: authReducer,

@@ -1,12 +1,16 @@
 import { useDispatch } from 'react-redux';
-import { logIn } from '../../redux/operations2';
+import { logIn } from '../../redux/auth/operationsAuth';
+import { useNavigate } from "react-router-dom";
+
 import css from './LoginForm.module.css';
 
 
 const LoginForm = () => {
   
     
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -18,6 +22,7 @@ const LoginForm = () => {
             })
         );
         form.reset();
+        navigate("/contacts")
     };
     
     
@@ -34,10 +39,14 @@ const LoginForm = () => {
                 </label>
                 <label >
                     Password
-                    <input type="password" name="password" />
+                    <input
+                        type="password"
+                        name="password"
+                        autoComplete="current-password"
+                    />
                 </label>
                 <button type="submit"
-                className={css.btnForm}>Log In</button>
+                    className={css.btnForm}>Log In</button>
             </form></>
   
     );    

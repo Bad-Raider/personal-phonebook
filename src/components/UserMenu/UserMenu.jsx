@@ -1,10 +1,12 @@
 import css from './UserMenu.module.css';
 import { useSelector, useDispatch } from 'react-redux';
-import { logOut } from 'redux/operations2';
+import { logOut } from 'redux/auth/operationsAuth';
+import { useNavigate } from "react-router-dom";
 
 const UserMenu = () => {
     const { auth } = useSelector(state => state);
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     return (
         <div>
@@ -12,7 +14,10 @@ const UserMenu = () => {
             <button
                 type="button"
                 className={css.btnLog}
-                onClick={() => dispatch(logOut())}
+                onClick={() => {
+                    dispatch(logOut())
+                    navigate("/")
+                }}
             >Logout</button>
         </div>
     );
