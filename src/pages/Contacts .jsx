@@ -12,7 +12,6 @@ const Contacts = () => {
     
     const dispatch = useDispatch();
     const { auth } = useSelector(state => state);
-    console.log('auth', auth);
     
     useEffect(() => {
         dispatch(fetchContacts());

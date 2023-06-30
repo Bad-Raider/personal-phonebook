@@ -1,6 +1,8 @@
 import { useDispatch } from 'react-redux';
 import { logIn } from '../../redux/auth/operationsAuth';
-import { useNavigate } from "react-router-dom";
+import { Navigate  } from "react-router-dom";
+import { useSelector } from 'react-redux';
+
 
 import css from './LoginForm.module.css';
 
@@ -9,8 +11,7 @@ const LoginForm = () => {
   
     
     const dispatch = useDispatch();
-    const navigate = useNavigate();
-
+    const { auth } = useSelector(state => state);
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -22,10 +23,13 @@ const LoginForm = () => {
             })
         );
         form.reset();
-        navigate("/contacts")
+        
     };
     
-    
+    if (auth.isLoggedIn) {
+        return <Navigate to="/" replace />
+    }
+
     return (
         <><h1 className={css.title}>LoginPage</h1>
             <form onSubmit={handleSubmit}
