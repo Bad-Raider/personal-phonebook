@@ -14,6 +14,10 @@
     color: white;   
 }
 
+.btnLog:active{
+    background-color: rgb(130, 130, 130);
+}
+
 .wraperUserMenu{
     display: flex;
     align-items: center;

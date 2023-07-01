@@ -17,3 +17,7 @@
     background-color: red;
     color: white;   
 }
+
+.btnForm:active{
+    background-color: rgb(130, 130, 130);
+}

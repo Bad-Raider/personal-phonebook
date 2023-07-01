@@ -36,8 +36,7 @@ header {
 }
 
 .btnNav:active{
-    background-color: rgb(242, 93, 93);
-    color: rgb(255, 255, 255);   
+    background-color: rgb(130, 130, 130);
 }
 
 .navigations{

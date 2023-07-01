@@ -14,6 +14,15 @@
     color: white;   
 }
 
+.btnNav:not(:last-child){
+    margin-right: 10px;
+}
+
+.btnNav:active{
+    background-color: rgb(130, 130, 130);
+}
+
+
 .wraperAuthNav{
     display: flex;
     

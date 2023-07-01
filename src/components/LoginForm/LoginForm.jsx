@@ -37,14 +37,18 @@ const LoginForm = () => {
 
                 <label >
                     Email
-                    <input type="email" name="email" />
+                    <input
+                        type="email"
+                        name="email"
+                        required
+                    />
                 </label>
                 <label >
                     Password
                     <input
                         type="password"
                         name="password"
-                        autoComplete="current-password"
+                        required
                     />
                 </label>
                 <button type="submit"
