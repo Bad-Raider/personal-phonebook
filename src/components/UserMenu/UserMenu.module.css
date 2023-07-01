@@ -13,3 +13,8 @@
     background-color: red;
     color: white;   
 }
+
+.wraperUserMenu{
+    display: flex;
+    align-items: center;
+}

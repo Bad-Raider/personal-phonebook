@@ -1,6 +1,14 @@
 const Home = () => {
+
+    const style = {
+    display: "flex",
+    color: "red",
+    justifyContent: "center",
+    marginTop: "150px",
+    };
+
     return (
-        <h1>Home</h1>
+        <h1 style={style}>Home page</h1>
     )
 }
 

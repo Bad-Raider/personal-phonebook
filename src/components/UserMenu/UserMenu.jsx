@@ -11,7 +11,7 @@ const UserMenu = () => {
     
 
     return (
-        <div>
+        <div className={css.wraperUserMenu}>
             <p>{auth.user.email }</p>
             <button
                 type="button"

@@ -2,13 +2,10 @@ import { useDispatch } from 'react-redux';
 import { logIn } from '../../redux/auth/operationsAuth';
 import { Navigate  } from "react-router-dom";
 import { useSelector } from 'react-redux';
-
-
 import css from './LoginForm.module.css';
 
 
 const LoginForm = () => {
-  
     
     const dispatch = useDispatch();
     const { auth } = useSelector(state => state);
@@ -31,12 +28,13 @@ const LoginForm = () => {
     }
 
     return (
-        <><h1 className={css.title}>LoginPage</h1>
+        <>
+            <h1 className={css.title}>LoginPage</h1>
             <form onSubmit={handleSubmit}
                 autoComplete="off"
                 className={css.form}
             >
-            
+
                 <label >
                     Email
                     <input type="email" name="email" />
@@ -51,9 +49,9 @@ const LoginForm = () => {
                 </label>
                 <button type="submit"
                     className={css.btnForm}>Log In</button>
-            </form></>
-  
-    );    
+            </form>
+        </>
+    )
 };
 
 export default LoginForm;
