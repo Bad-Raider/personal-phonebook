@@ -1,13 +1,18 @@
 import { NavLink } from "react-router-dom";
-import css from './AuthNav.module.css'
+import Button from '@mui/material/Button';
 
 const AuthNav = () => {
     
     return (
-        <div className={css.wraperAuthNav}>
-            <NavLink to="login" className={css.btnNav} >login</NavLink>   
-            <NavLink to="register" className={css.btnNav}>Register</NavLink>
-        </div>);  
+        <div style={{ display: 'flex' }}>
+            <NavLink to="login" >
+                <Button variant="contained">log in</Button>
+            </NavLink>
+            
+            <NavLink to="register" >
+                <Button variant="outlined" sx={{ ml: 1, }}>Sign up</Button>
+            </NavLink>
+        </div>);
 };
 
 export default AuthNav;

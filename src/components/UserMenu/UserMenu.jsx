@@ -2,6 +2,7 @@ import css from './UserMenu.module.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { logOut } from 'redux/auth/operationsAuth';
 import { useNavigate } from "react-router-dom";
+import { Chip } from '@mui/material';
 
 
 const UserMenu = () => {
@@ -9,18 +10,14 @@ const UserMenu = () => {
     const navigate = useNavigate();
     const { auth } = useSelector(state => state);
     
+    const handleClick = () => {
+        dispatch(logOut())
+        navigate("/")
+    };
 
     return (
         <div className={css.wraperUserMenu}>
-            <p>{auth.user.email }</p>
-            <button
-                type="button"
-                className={css.btnLog}
-                onClick={() => {
-                    dispatch(logOut())
-                    navigate("/")
-                }}
-            >Logout</button>
+            <Chip label={auth.user.email } onClick={handleClick} />
         </div>
     );
  };
