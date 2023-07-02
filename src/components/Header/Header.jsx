@@ -12,22 +12,24 @@ const Header  = () => {
     return (
         <div className={css.container}>
             <header>
-                <nav className={css.navigations}>
-                    <NavLink to="/" >
-                        <Button variant="contained">Home</Button>
-                    </NavLink>
-
-                    {auth.isLoggedIn
-                        ? <NavLink to="contacts" >
-                            <Button variant="contained" sx={{mr: 1}}>Contacts</Button>
+                <div className={css.wraper}>
+                    <nav className={css.navigations}>
+                        <NavLink to="/" >
+                            <Button variant="contained">Home</Button>
                         </NavLink>
-                        : <AuthNav></AuthNav>}
-                </nav>
-                {auth.isLoggedIn && <UserMenu />}
-            </header>
+
+                        {auth.isLoggedIn
+                            ? <NavLink to="contacts" >
+                                <Button variant="contained" sx={{ mr: 1 }}>Contacts</Button>
+                            </NavLink>
+                            : <AuthNav></AuthNav>}
+                    </nav>
+                    {auth.isLoggedIn && <UserMenu />}
+                </div>
+            </header>      
             <main>{<Outlet />}</main>
         </div>
-    )
+    );
 };
 
 export default Header;
