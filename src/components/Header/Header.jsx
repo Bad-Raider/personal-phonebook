@@ -4,6 +4,7 @@ import css from './Header.module.css'
 import UserMenu from 'components/UserMenu/UserMenu';
 import AuthNav from 'components/AuthNav/AuthNav';
 import Button from '@mui/material/Button';
+import HomeIcon from '@mui/icons-material/Home';
 
 
 const Header  = () => {
@@ -15,18 +16,20 @@ const Header  = () => {
                 <div className={css.wraper}>
                     <nav className={css.navigations}>
                         <NavLink to="/" >
-                            <Button variant="contained">Home</Button>
+                            <Button variant="contained" sx={{ pl: 5, pr: 5,  }}>
+                                <HomeIcon color="disabled" sx={{ fill: 'white' }} />
+                            </Button>
                         </NavLink>
 
                         {auth.isLoggedIn
                             ? <NavLink to="contacts" >
-                                <Button variant="contained" sx={{ mr: 1 }}>Contacts</Button>
+                                <Button variant="contained" sx={{ mr: 1, pl: 5, pr: 5 }}>Contacts</Button>
                             </NavLink>
                             : <AuthNav></AuthNav>}
                     </nav>
                     {auth.isLoggedIn && <UserMenu />}
                 </div>
-            </header>      
+            </header>
             <main>{<Outlet />}</main>
         </div>
     );
