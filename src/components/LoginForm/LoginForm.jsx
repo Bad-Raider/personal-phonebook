@@ -1,13 +1,13 @@
-import { css } from '@emotion/react'
 import { useDispatch } from 'react-redux';
-import { logIn } from '../../redux/auth/operationsAuth';
-import { Navigate  } from "react-router-dom";
 import { useSelector } from 'react-redux';
+import { Navigate  } from "react-router-dom";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import styled from '@emotion/styled'
-
-
+import Alert from '@mui/material/Alert';
+import Stack from '@mui/material/Stack';
+import SendIcon from '@mui/icons-material/Send';
+import { Form } from './styled';
+import { logIn } from '../../redux/auth/operationsAuth';
 
 const LoginForm = () => {
     
@@ -24,63 +24,46 @@ const LoginForm = () => {
             })
         );
         form.reset();
-        
     };
     
-    if (auth.isLoggedIn) {
-        return <Navigate to="/" replace />
-    }
+    
 
-    const Button = styled.button`
-  padding: 32px;
-  background-color: hotpink;
-  font-size: 24px;
-  border-radius: 4px;
-  color: black;
-  font-weight: bold;
-  &:hover {
-    color: white;
-  }
-`
+    if (auth.isLoggedIn) {
+        return <Navigate to="/" replace />   
+    }
+    
     return (
-        <form
+        <Form
             onSubmit={handleSubmit}
             autoComplete="off"
-            
         >
-            <div
-                style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                }}
-            >
-                <TextField
-                    id="outlined-basic"
-                    label="Email"
-                    variant="outlined"
-                    type="email"
-                    name="email"
-                    required
-                    sx={{ width: "80%" }}
-                />
-                <TextField
-                    id="outlined-basic"
-                    label="Password"
-                    variant="outlined"
-                    type="password"
-                    name="password"
-                    required
-                    sx={{}}
-                />
-                <Button
-                    variant="contained"
-                    type="submit"
-                    
-                >Login</Button>
-            </div>
-        </form>
- 
-    )
+            <TextField
+                id="outlined-basic"
+                label="Email"
+                variant="outlined"
+                type="email"
+                name="email"
+                required
+                sx={{ width: "100%", mb: 3 }}
+            />
+            <TextField
+                id="outlined-basic"
+                label="Password"
+                variant="outlined"
+                type="password"
+                name="password"
+                required
+                sx={{ width: "100%", mb: 3 }}
+            />
+            <Button
+                variant="contained"
+                type="submit"
+                endIcon={<SendIcon />}
+                sx={{ width: "100%", mb: 3 }}
+            >Login
+            </Button>
+        </Form>
+    );
 }
 
 export default LoginForm;

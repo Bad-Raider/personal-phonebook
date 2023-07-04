@@ -1,8 +1,11 @@
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operationsAuth';
-import css from './RegisterForm.module.css';
 import { Navigate,   } from "react-router-dom";
 import { useSelector } from 'react-redux';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import SendIcon from '@mui/icons-material/Send';
+import { Form } from './styled';
 
 
 
@@ -28,25 +31,47 @@ const RegisterForm = () => {
     };
 
 
-    return (<>
-        <h1 className={css.title}>RegisterPage</h1>
-
-        <form className={css.form} onSubmit={handleSubmit} autoComplete="off">
-            <label className={css.label}>
-                Username
-                <input type="text" name="name" required/>
-            </label>
-            <label className={css.label}>
-                Email
-                <input type="email" name="email" required/>
-            </label>
-            <label className={css.label}>
-                Password
-                <input type="password" name="password" required/>
-            </label>
-            <button type="submit" className={css.btnForm}>Register</button>
-        </form>
-    </>);
+    return (
+        <Form
+            onSubmit={handleSubmit}
+            autoComplete="off"
+        >
+            <TextField
+                id="outlined-basic"
+                label="Email"
+                variant="outlined"
+                type="text"
+                name="name"
+                required
+                sx={{ width: "100%", mb: 3 }}
+            />
+            <TextField
+                id="outlined-basic"
+                label="Password"
+                variant="outlined"
+                type="email"
+                name="email"
+                required
+                sx={{ width: "100%", mb: 3 }}
+            />
+            <TextField
+                id="outlined-basic"
+                label="Password"
+                variant="outlined"
+                type="password"
+                name="password"
+                required
+                sx={{ width: "100%", mb: 3 }}
+            />
+            <Button
+                variant="contained"
+                type="submit"
+                endIcon={<SendIcon />}
+                sx={{ width: "100%", mb: 3 }}
+            >Sign UP
+            </Button>
+        </Form>
+    );
 };
 
 
