@@ -1,8 +1,12 @@
+import { css } from '@emotion/react'
 import { useDispatch } from 'react-redux';
 import { logIn } from '../../redux/auth/operationsAuth';
 import { Navigate  } from "react-router-dom";
 import { useSelector } from 'react-redux';
-import css from './LoginForm.module.css';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import styled from '@emotion/styled'
+
 
 
 const LoginForm = () => {
@@ -27,35 +31,58 @@ const LoginForm = () => {
         return <Navigate to="/" replace />
     }
 
+    const Button = styled.button`
+  padding: 32px;
+  background-color: hotpink;
+  font-size: 24px;
+  border-radius: 4px;
+  color: black;
+  font-weight: bold;
+  &:hover {
+    color: white;
+  }
+`
     return (
-        <>
-            <h1 className={css.title}>LoginPage</h1>
-            <form onSubmit={handleSubmit}
-                autoComplete="off"
-                className={css.form}
+        <form
+            onSubmit={handleSubmit}
+            autoComplete="off"
+            
+        >
+            <div
+                style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                }}
             >
-
-                <label >
-                    Email
-                    <input
-                        type="email"
-                        name="email"
-                        required
-                    />
-                </label>
-                <label >
-                    Password
-                    <input
-                        type="password"
-                        name="password"
-                        required
-                    />
-                </label>
-                <button type="submit"
-                    className={css.btnForm}>Log In</button>
-            </form>
-        </>
+                <TextField
+                    id="outlined-basic"
+                    label="Email"
+                    variant="outlined"
+                    type="email"
+                    name="email"
+                    required
+                    sx={{ width: "80%" }}
+                />
+                <TextField
+                    id="outlined-basic"
+                    label="Password"
+                    variant="outlined"
+                    type="password"
+                    name="password"
+                    required
+                    sx={{}}
+                />
+                <Button
+                    variant="contained"
+                    type="submit"
+                    
+                >Login</Button>
+            </div>
+        </form>
+ 
     )
-};
+}
 
 export default LoginForm;
+
+
