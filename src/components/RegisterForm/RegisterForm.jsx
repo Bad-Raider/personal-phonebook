@@ -6,6 +6,7 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 import { Form } from './styled';
+import Swal from 'sweetalert2';
 
 
 
@@ -21,8 +22,27 @@ const RegisterForm = () => {
                 name: form.elements.name.value,
                 email: form.elements.email.value,
                 password: form.elements.password.value,
+            }))
+            .unwrap()
+            .then(res => {
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: `Registration completed successfully !`,
+                    showConfirmButton: false,
+                    timer: 1000,
+                });
             })
-        );
+            .catch(e => {
+                Swal.fire({
+                    position: 'center',
+                    icon: 'error',
+                    text: `Please, try again!`,
+                    showConfirmButton: false,
+                    timer: 1000,
+                });
+            });
+
         form.reset();
     };
 
@@ -36,9 +56,10 @@ const RegisterForm = () => {
             onSubmit={handleSubmit}
             autoComplete="off"
         >
+            <h2>Sigh in </h2>
             <TextField
                 id="outlined-basic"
-                label="Email"
+                label="Name"
                 variant="outlined"
                 type="text"
                 name="name"
@@ -47,7 +68,7 @@ const RegisterForm = () => {
             />
             <TextField
                 id="outlined-basic"
-                label="Password"
+                label="Email"
                 variant="outlined"
                 type="email"
                 name="email"

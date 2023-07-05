@@ -1,18 +1,14 @@
 import { useDispatch } from 'react-redux';
-import { useSelector } from 'react-redux';
-import { Navigate  } from "react-router-dom";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import Alert from '@mui/material/Alert';
-import Stack from '@mui/material/Stack';
 import SendIcon from '@mui/icons-material/Send';
 import { Form } from './styled';
 import { logIn } from '../../redux/auth/operationsAuth';
+import Swal from 'sweetalert2';
 
 const LoginForm = () => {
     
     const dispatch = useDispatch();
-    const { auth } = useSelector(state => state);
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -21,22 +17,36 @@ const LoginForm = () => {
             logIn({
                 email: form.elements.email.value,
                 password: form.elements.password.value,
+            }))
+            .unwrap()
+            .then(res => {
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: `Welcome!`,
+                    showConfirmButton: false,
+                    timer: 1500,
+                });
             })
-        );
+            .catch(e => {
+                Swal.fire({
+                    position: 'center',
+                    icon: 'error',
+                    text: `Invalid email or password. Please, try again!`,
+                    showConfirmButton: false,
+                    timer: 1500,
+                });
+            })
         form.reset();
-    };
-    
-    
-
-    if (auth.isLoggedIn) {
-        return <Navigate to="/" replace />   
-    }
-    
+    }  
+      
     return (
         <Form
             onSubmit={handleSubmit}
             autoComplete="off"
         >
+            <h2>Log in </h2>
+
             <TextField
                 id="outlined-basic"
                 label="Email"
