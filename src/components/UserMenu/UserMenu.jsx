@@ -20,7 +20,7 @@ const UserMenu = () => {
             label={auth.user.email}
             onClick={handleClick}
             variant="outlined"
-            color="error"
+            color="info"
             size="small"
             icon={<FaceIcon />}
         />
