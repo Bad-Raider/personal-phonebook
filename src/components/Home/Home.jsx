@@ -7,7 +7,9 @@ const Home = () => {
     return (
         <Wraper>
             <Title>Welcom to phonebook app!</Title>
-            <div>{svg}</div>
+            <div className="App">
+                <img src={svg} alt="React Logo" />
+            </div>
         </Wraper>
     )
 };
