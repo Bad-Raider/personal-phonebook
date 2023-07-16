@@ -25,7 +25,7 @@ const LoginForm = () => {
                     icon: 'success',
                     title: `Welcome!`,
                     showConfirmButton: false,
-                    timer: 500,
+                    timer: 1500,
                 });
             })
             .catch(e => {
@@ -34,7 +34,7 @@ const LoginForm = () => {
                     icon: 'error',
                     text: `Invalid email or password. Please, try again!`,
                     showConfirmButton: false,
-                    timer: 500,
+                    timer: 1500,
                 });
             })
         form.reset();

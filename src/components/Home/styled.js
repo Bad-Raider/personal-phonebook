@@ -2,16 +2,23 @@ import styled from "@emotion/styled";
 
 export const Wraper = styled.div(`
         padding-left: 15px;
-        padding-right: 15px
+        padding-right: 15px;
+        margin-top: 40px;
+
+        @media (min-width: 900px) { 
+                display: flex;
+         }
+
 `);
 
 
-export const Title = styled.h2(`
-        display: flex;
-        justify-content: center;
-        margin-top: 100px;
+export const Image = styled.img(`
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
 
-        @@media (max-width: 375px) { 
-        display: column
-        }
-`)
+        @media (min-width: 900px) { 
+                max-width: 35%;
+         }
+
+`);

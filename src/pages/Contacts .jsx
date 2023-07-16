@@ -21,8 +21,8 @@ const Contacts = () => {
     return (
         auth.isLoggedIn &&
         <div style={{
-            paddingRigth: 15,
-            paddingLeft: 15
+            paddingRight: '15px',
+            paddingLeft: '15px'
         }}>
             <Container>
                     <h2>Phonebook</h2>

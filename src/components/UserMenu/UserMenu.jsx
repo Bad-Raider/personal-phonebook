@@ -2,7 +2,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { logOut } from 'redux/auth/operationsAuth';
 import { useNavigate } from "react-router-dom";
 import { Chip } from '@mui/material';
-import LogoutIcon from '@mui/icons-material/Logout';
+import FaceIcon from '@mui/icons-material/Face';
 
 
 const UserMenu = () => {
@@ -16,17 +16,14 @@ const UserMenu = () => {
     };
 
     return (
-       
-            <>
-            <Chip
-                avatar={<LogoutIcon/>}
-                label={auth.user.email}
-                onClick={handleClick}
-                sx={{p: 3, fontSize: 17}}
-            />
-            
-        </>
-    
+        <Chip
+            label={auth.user.email}
+            onClick={handleClick}
+            variant="outlined"
+            color="error"
+            size="small"
+            icon={<FaceIcon />}
+        />
     );
  };
 
