@@ -6,11 +6,20 @@ const AuthNav = () => {
     return (
         <div style={{ display: 'flex' }}>
             <NavLink to="login" >
-                <Button variant="contained" sx={{pl: 5, pr: 5}}>log in</Button>
+                <Button
+                    variant="contained"
+                    size="small"
+                >log in
+                </Button>
             </NavLink>
             
             <NavLink to="register" >
-                <Button variant="outlined" sx={{ ml: 1, pl: 5, pr: 5 }}>Sign up</Button>
+                <Button
+                    variant="outlined"
+                    size="small"
+                    sx={{ ml: 1}}
+                >Sign up
+                </Button>
             </NavLink>
         </div>);
 };

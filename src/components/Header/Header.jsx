@@ -23,7 +23,7 @@ const Header  = () => {
 
                         {auth.isLoggedIn
                             ? <NavLink to="contacts" >
-                                <Button variant="contained" sx={{ mr: 1, pl: 5, pr: 5 }}>Contacts</Button>
+                                <Button variant="contained" sx={{ ml: 1, mr: 1 }}>Contacts</Button>
                             </NavLink>
                             : <AuthNav></AuthNav>}
                     </nav>

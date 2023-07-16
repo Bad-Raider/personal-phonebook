@@ -1,9 +1,8 @@
-import css from './Container.module.css';
+import { ContainerPhone } from './styled';
 
-const Container = ({ children }) => {
+export const Container = ({ children }) => {
     return (
-        <section className={css.section}>{children }</section>
+        <ContainerPhone>{ children}</ContainerPhone>
     )
 }
 
-export default Container;
