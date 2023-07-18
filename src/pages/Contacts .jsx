@@ -11,8 +11,9 @@ import { fetchContacts } from "redux/contacts/operationsContacts";
 const Contacts = () => {
     
     const dispatch = useDispatch();
-    const { auth } = useSelector(state => state);
-    
+    const { auth, contacts } = useSelector(state => state);
+    const lengthContacts = contacts.items.length >= 1;
+
     useEffect(() => {
         dispatch(fetchContacts());
     }, [dispatch]);
@@ -25,14 +26,18 @@ const Contacts = () => {
             paddingLeft: '15px'
         }}>
             <Container>
-                    <h2>Phonebook</h2>
-                    <ContactForm />
-                    <h2>Contacts</h2>
-                    <ContactFilter />
-                    <ContactList />
+                <h2>Phonebook</h2>
+                <ContactForm />
+                {lengthContacts &&
+                    <>
+                        <h2>Contacts</h2>
+                        <ContactFilter />
+                        <ContactList />
+                    </>
+                }
             </Container>
         </div>
-    )
+    );
 };
 
 

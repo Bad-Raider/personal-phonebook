@@ -1,7 +1,7 @@
-import css from './ContactFilter.module.css';
 import { useSelector, useDispatch } from "react-redux";
-import { addFilter } from 'redux/filter/filterSlice'; 
-
+import { addFilter } from 'redux/filter/filterSlice';
+import { Wraper, Title } from "./styled.js";
+ 
 
 const ContactFilter = () => {
 
@@ -14,15 +14,14 @@ const ContactFilter = () => {
   };
 
   return (
-    <>
-      <p>Find contacts by name</p>
+    <Wraper>
+      <Title>Find contacts by name</Title>
       <input
-        className={css.contactFilter}
         type="text"
         value={filter}
         onChange={handleChange}
       />
-    </>
+    </Wraper>
   )
 };
 

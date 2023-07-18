@@ -2,8 +2,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { logOut } from 'redux/auth/operationsAuth';
 import { useNavigate } from "react-router-dom";
 import { Chip } from '@mui/material';
-import FaceIcon from '@mui/icons-material/Face';
-
+import LogoutIcon from '@mui/icons-material/Logout';
 
 const UserMenu = () => {
     const dispatch = useDispatch();
@@ -22,7 +21,7 @@ const UserMenu = () => {
             variant="outlined"
             color="info"
             size="small"
-            icon={<FaceIcon />}
+            icon={<LogoutIcon />}
         />
     );
  };

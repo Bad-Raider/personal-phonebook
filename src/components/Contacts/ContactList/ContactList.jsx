@@ -1,6 +1,10 @@
 import ContactItem from "../ContactItem/ContactItem";
-import css from './ContactList.module.css';
 import { useSelector } from "react-redux";
+import CircularProgress from "@mui/material/CircularProgress";
+import Box from "@mui/material/Box";
+import Ul from "./styled";
+
+
 
 const ContactList = () => {
 
@@ -17,9 +21,13 @@ const ContactList = () => {
 
     return (
         <>
-            {contacts.isLoading && <h2>Loading...</h2>}
+            {contacts.isLoading &&
+                <Box sx={{ display: 'flex' }}>
+                <CircularProgress />
+                </Box>
+            }
             {contacts.error && <h2>Oooopsss! Try again, please</h2>}
-            <ul className={css.list}>
+            <Ul>
                 {arrContacts.map(({ id, name, number, phone }) => (
                     <ContactItem
                         key={id}
@@ -28,7 +36,7 @@ const ContactList = () => {
                         number={number || phone}
                     />
                 ))}
-            </ul>
+            </Ul>
         </>
     );
 };

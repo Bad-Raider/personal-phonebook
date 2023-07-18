@@ -1,33 +1,36 @@
 import PropTypes from "prop-types";
-import css from './ContactItem.module.css';
 import { useDispatch } from "react-redux";
 import { deleteContact } from "redux/contacts/operationsContacts";
+import { Li, Span, Div, SpanNum, } from "./styled.js";
+import IconButton from '@mui/material/IconButton';
+import DeleteIcon from '@mui/icons-material/Delete';
+
 
 const ContactItem = ({ id, name, number }) => {
 
     const dispatch = useDispatch();
-    
     const handleDeleteContact = () => {
-        dispatch(deleteContact(id)); 
+        dispatch(deleteContact(id));
     };
     
     return (
-        <>
-            <li className={css.item}>
-                <span className={css.span}>{name}: </span>
-                <div className={css.wraper}>
-                    <span className={css.spanNum}>{number}</span>
-                    <button
-                        className={css.itemBtn}
-                        type="button"
-                        onClick={handleDeleteContact}
-                    >X
-                    </button>
-                </div>
-            </li >
-        </>
+        <Li>
+            <Span>{name}: </Span>
+            <Div>
+                <SpanNum>{number}</SpanNum>
+                <IconButton
+                    aria-label="delete"
+                    size="large"
+                    type="button"
+                    onClick={handleDeleteContact}
+                    color="error"
+                >
+                    <DeleteIcon />
+                </IconButton>
+            </Div>
+        </Li>
     );
-}
+};
 
 export default ContactItem;
 

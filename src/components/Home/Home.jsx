@@ -18,7 +18,7 @@ const Home = () => {
                 <Image src={svg} alt="React Logo" />
             </div>
         </Wraper>
-    )
+    );
 };
 
 export default Home;
