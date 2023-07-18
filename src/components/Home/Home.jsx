@@ -1,4 +1,4 @@
-import { Wraper, Image } from "./styled";
+import { Wraper, Image, Title, ItemList } from "./styled";
 import svg from "../../images/human.svg";
 
 
@@ -7,10 +7,10 @@ const Home = () => {
     return (
         <Wraper>
             <div>
-                <h2>What we do? </h2>
+                <Title>What we do? </Title>
                 <ul>
-                    <li>We keep the numbers of your enemies </li>
-                    <li>We help you to find the right enemy when it's time to take revenge</li>
+                    <ItemList>We keep the numbers of your enemies </ItemList>
+                    <ItemList>We help you to find the right enemy when it's time to take revenge</ItemList>
                 </ul>
                 
             </div>

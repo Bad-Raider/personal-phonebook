@@ -1,4 +1,4 @@
-import {Container} from "../components/Container/Container";
+import Container from "../components/Container/Container";
 import ContactForm from "../components/ContactForm/ContactForm";
 import ContactList from "../components/Contacts/ContactList/ContactList";
 import ContactFilter from "../components/ContactFilter/ContactFilter";

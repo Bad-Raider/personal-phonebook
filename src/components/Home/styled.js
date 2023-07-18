@@ -22,3 +22,23 @@ export const Image = styled.img(`
          }
 
 `);
+
+export const Title = styled.h2(`
+        font-size: 40px;
+        @media (min-width: 900px) { 
+                display: flex;
+                font-size: 60px;
+        }
+`);
+
+export const ItemList = styled.li(`
+                font-size: 20px;
+        @media (min-width: 900px) { 
+                font-size: 40px;
+        }
+`);
+
+
+
+
+

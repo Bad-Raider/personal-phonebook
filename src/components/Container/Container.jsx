@@ -6,3 +6,4 @@ export const Container = ({ children }) => {
     )
 }
 
+export default Container;
