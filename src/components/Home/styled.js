@@ -24,17 +24,60 @@ export const Image = styled.img(`
 `);
 
 export const Title = styled.h2(`
+        
+        @media (min-width: 900px) { 
+        font-size: 30px;
+        }
+
         font-size: 40px;
+        font-family: 'Rakkas', cursive;
+        transform: scale(0.94);
+        animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+        @keyframes scale {
+                100% {
+        transform: scale(1);
+        }
         @media (min-width: 900px) { 
                 display: flex;
                 font-size: 60px;
         }
 `);
 
+export const Words = styled.span(`
+        display: inline-block;
+        font-family: 'Rakkas', cursive;
+        opacity: 0;
+        filter: blur(4px);
+
+        &:nth-child(1) {
+        animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+        }
+
+        &:nth-child(2) {
+        animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+        }
+
+        &:nth-child(3) {
+        animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+        }
+
+        @keyframes fade-in {
+        100% {
+         opacity: 1;
+        filter: blur(0);
+  }
+`);
+
 export const ItemList = styled.li(`
-                font-size: 20px;
+        font-size: 20px;
+
+        
+        &:not(:last-child){
+        margin-bottom: 20px;
+        }
+
         @media (min-width: 900px) { 
-                font-size: 40px;
+                font-size: 30px;
         }
 `);
 
