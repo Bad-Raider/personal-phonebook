@@ -39,10 +39,3 @@ export const store = configureStore({
 
 export const persistor = persistStore(store);
 
-
-
-// import { reducer } from './reducer';
-
-// export const store = configureStore({
-//   reducer
-// });
