@@ -38,7 +38,7 @@ To get a copy of this project up and running on your local machine, follow these
 ```shell
  npm install
 ```
-**3 Start the development server:**
+**3. Start the development server:**
 ```shell
 npm start
 ```
