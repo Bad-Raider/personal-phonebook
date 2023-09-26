@@ -21,11 +21,11 @@ Delete contacts they no longer need.
 Search for specific contacts by name.
 
 ## Technologies Used
- `React:` The core framework for building the user interface.
- `Redux Toolkit:` Used for state management, making it easy to manage and update the application's state.
- `Redux Persist:` Enables the app to persist user contacts data in the local storage, ensuring data is retained across sessions.
- `Emotion Styled:` Used for styling components, providing a maintainable and flexible styling solution.
- `Material-UI (MUI):` Offers pre-built UI components and styles to enhance the application's user interface.
+- `React:` The core framework for building the user interface.
+- `Redux Toolkit:` Used for state management, making it easy to manage and update the application's state.
+- `Redux Persist:` Enables the app to persist user contacts data in the local storage, ensuring data is retained across sessions.
+- `Emotion Styled:` Used for styling components, providing a maintainable and flexible styling solution.
+- `Material-UI (MUI):` Offers pre-built UI components and styles to enhance the application's user interface.
 
 ## Getting Started
 To get a copy of this project up and running on your local machine, follow these steps:
