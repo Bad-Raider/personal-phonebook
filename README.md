@@ -4,18 +4,19 @@ This is a React-based web application that serves as a contact manager. It allow
 
 ## Features
 
-**1. Home Page**
+-**1. Home Page**
 The landing page of the application provides an introduction to the contact manager and its features.
 Users can navigate to other sections of the app from here.
-**2. Login**
+-**2. Login**
 Users can log in to the application by providing their credentials.
 Authentication is handled securely, ensuring user data remains protected.
-**3. Logout**
+-**3. Logout**
 Logged-in users can log out from their accounts, securely ending their session.
-**4. Contacts**
+-**4. Contacts**
 The heart of the application, where users can:
 View a list of their saved contacts.
-Add new contacts with details such as name, phone number, and email.
+
+>Add new contacts with details such as name, phone number, and email.
 Edit existing contacts.
 Delete contacts they no longer need.
 Search for specific contacts by name.
