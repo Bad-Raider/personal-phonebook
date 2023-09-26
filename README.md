@@ -39,7 +39,8 @@ To get a copy of this project up and running on your local machine, follow these
  npm install
 ```
 **3 Start the development server:**
-```npm start
+```shell
+npm start
 ```
 The application should now be running on `http://localhost:3000/.`
 
